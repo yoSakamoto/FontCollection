@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>FontCollection</title>
+</head>
+<body>
+<% if current_user %>
+  <% if @error %>
+    <div class="alert alert-danger" role="alert">
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <span class="sr-only">Error:</span>
+      <%= @error %>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="glyphicon glyphicon-triangle-right">
+          </span>投稿</div>
+        
+        <div class="panel-body">
+          <form action="/review/create" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="title">タイトル</label>
+              <input id="title" class="form-control" type="text" name="title" />
+            </div>
+            <div class="form-group">
+              <label for="body">テキスト</label>
+              <textarea id="body" class="form-control" name="body"cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary pull- right">投稿</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h1 class="page-header">みんなのおすすめフォント</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <ul class="list-group">
+        <% @reviews.each do |review| %>
+        <div class="row">
+          <div class="col-md-12">
+          <h3>
+            <span class="glyphicon glyphicon-bookmark">
+            </span> <%= review.title %>
+          </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-12"><%=review.body %></div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <a class="pull-right" href="/review/<%=review.id %>">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+</body>
+</html>
