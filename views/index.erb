@@ -40,7 +40,7 @@
     <h1 class="page-header">みんなのおすすめフォント</h1>
   </div>
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-12">
       <ul class="list-group">
         <% @reviews.each do |review| %>
         <div class="row">
@@ -52,18 +52,18 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-9">
+          <div class="col-md-12">
             <div class="row">
               <div class="col-md-12"><%=review.body %></div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <a class="pull-right" href="/review/<%=review.id %>">
-                <span class="glyphicon glyphicon-plus-sign"></span>
-                </a>
-              </div>
-            </div>
           </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+              <a class="pull-right btn-lg" href="/review/<%=review.id %>">
+              <span class="glyphicon glyphicon-plus-sign"></span>
+              </a>
+            </div>
         </div>
         <% end %>
       </ul>

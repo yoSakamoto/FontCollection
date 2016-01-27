@@ -39,6 +39,10 @@ get '/' do
     erb :index
 end
 
+get '/mypage' do
+  erb :mypage
+end
+
 get '/sign_in' do
   erb :sign_in
 end
