@@ -1,0 +1,15 @@
+$large-screen-up: 1400px !default;
+@media only screen and (min-width: $large-screen-up) {
+// ここからmedia screenの設定
+main {
+  width: 90%;
+}
+main article {
+  @include justify-content(space-around);
+  margin: 0 1%;
+  width: 15%;
+  // @include flexbox-child($basis: 2%, $grow: 1);
+}
+
+// ここまでmedia screenの設定
+}

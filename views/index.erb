@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>FontCollection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
 <% if current_user %>
@@ -13,37 +15,50 @@
       <%= @error %>
     </div>
   <% end %>
-  <div class="row">
-    <div class="col-lg-10 col-lg-offset-1">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <span class="glyphicon glyphicon-triangle-right">
-          </span>投稿</div>
-        
-        <div class="panel-body">
-          <form action="/review/create" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="title">タイトル</label>
-              <input id="title" class="form-control" type="text" name="title" />
-            </div>
-            <div class="form-group">
-              <label for="body">テキスト</label>
-              <textarea id="body" class="form-control" name="body"cols="30" rows="10"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary pull- right">投稿</button>
-          </form>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg　" data-toggle="modal" data-target="#myModal">
+    投稿ボタン
+  </button>
+  <a href="/haiku"><span class="glyphicon glyphicon-new-window"></span>ボタん</a>
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">投稿</h4>
         </div>
+        <div class="modal-body">
+          <form action="/review/create" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="title">タイトル</label>
+                <input id="title" class="form-control" type="text" name="title" />
+              </div>
+              <div class="form-group">
+                <label for="body">テキスト</label>
+                <textarea id="body" class="form-control" name="body"cols="30" rows="10"></textarea>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary pull- right">投稿</button>
+        </div>
+        </form>
       </div>
     </div>
   </div>
   <div class="row">
     <h1 class="page-header">みんなのおすすめフォント</h1>
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      <ul class="list-group">
+  <main>
+    <div class="row">
+    <div class="col-md-6">
         <% @reviews.each do |review| %>
-        <div class="row">
+        <ul class="panel panel-primary">
+        <article>
+          <div class="row">
           <div class="col-md-12">
           <h3>
             <span class="glyphicon glyphicon-bookmark">
@@ -65,10 +80,14 @@
               </a>
             </div>
         </div>
+        </article>
+        </ul>
         <% end %>
-      </ul>
+      
     </div>
   </div>
+  </main>
+  
 <% end %>
 </body>
 </html>

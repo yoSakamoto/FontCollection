@@ -34,6 +34,10 @@ post '/review/create' do
 end
 
 
+get '/haiku' do
+  erb :haiku
+end
+
 get '/' do
     @reviews = Review.all
     erb :index

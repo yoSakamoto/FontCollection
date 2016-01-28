@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>一句詠む</title>
+  <link rel="stylesheet" href="./stylesheets/haiku.css">
+</head>
+<body>
+
+<div id="modal-view" class="edit-view">
+  <div class="form-box">
+    <h2>句を詠みなおす</h2>
+    <form action="/new" method="post">
+      <p>上の句</p>
+      <input type="text" maxlength="5" name="haiku1" value="嘆きつつ">
+      <input type="text" maxlength="7" name="haiku2" value="ますらをのこの">
+      <input type="text" maxlength="5" name="haiku3" value="恋ふれこそ">
+      <p>下の句</p>
+      <input type="text" maxlength="7" name="haiku4" value="我が髪結ひの">
+      <input type="text" maxlength="7" name="haiku5" value="漬ちてぬれけれ">
+      <p>ペンネーム</p>
+      <input type="text" maxlength="10" name="author" value="よみひと知らず">
+      <input type="submit" value="再 投 稿">
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

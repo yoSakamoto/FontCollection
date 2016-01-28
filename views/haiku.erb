@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>一句詠む</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./stylesheets/haiku.css">
+</head>
+<body>
+<header>
+  <h1><a href="#modal-view">一句詠む</a></h1>
+</header>
+
+<div id="modal-view">
+  <a href="#" class="close"></a>
+  <div class="form-box">
+    <h2>一句どうぞ</h2>
+    <form action="/new" method="post">
+      <h3>上の句</h3>
+      <input type="text" maxlength="5" name="haiku1" placeholder="5文字まで">
+      <input type="text" maxlength="7" name="haiku2" placeholder="7文字まで">
+      <input type="text" maxlength="5" name="haiku3" placeholder="5文字まで">
+      <h3>下の句</h3>
+      <input type="text" maxlength="7" name="haiku4" placeholder="7文字まで">
+      <input type="text" maxlength="7" name="haiku5" placeholder="7文字まで">
+      <h3>ペンネーム</h3>
+      <input type="text" maxlength="10" name="author" placeholder="詠み人知らず">
+      <input type="submit" value="投 稿">
+    </form>
+  </div>
+</div>
+
+<main>
+  <!-- ここから一つの記事 -->
+  <article>
+    <!-- ここから投稿内容を表示する -->
+    <span>嘆きつつ</span>
+    <span>ますらをのこの</span>
+    <span>恋ふれこそ</span>
+    <span>我が髪結ひの</span>
+    <span>漬ちてぬれけれ</span>
+    <p>作者：よみひと知らず</p>
+    <!-- ここまで投稿内容を表示する -->
+
+    <!-- ここから編集・削除・いいねボタンの設置場所 -->
+    <div class="edit">
+      <!--<form action="/edit/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="編集">-->
+      <!--</form>-->
+      <!--<form action="/delete/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="削除">-->
+      <!--</form>-->
+      <!--<form action="/good/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="いいね">-->
+      <!--</form>-->
+    </div>
+    <!-- ここまで編集・削除・いいねボタンの設置場所 -->
+  </article>
+  <!-- ここまで一つの記事 -->
+  <!-- ここから一つの記事 -->
+  <article>
+    <!-- ここから投稿内容を表示する -->
+    <span>嘆きつつ</span>
+    <span>ますらをのこの</span>
+    <span>恋ふれこそ</span>
+    <span>我が髪結ひの</span>
+    <span>漬ちてぬれけれ</span>
+    <p>作者：よみひと知らず</p>
+    <!-- ここまで投稿内容を表示する -->
+
+    <!-- ここから編集・削除・いいねボタンの設置場所 -->
+    <div class="edit">
+      <!--<form action="/edit/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="編集">-->
+      <!--</form>-->
+      <!--<form action="/delete/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="削除">-->
+      <!--</form>-->
+      <!--<form action="/good/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="いいね">-->
+      <!--</form>-->
+    </div>
+    <!-- ここまで編集・削除・いいねボタンの設置場所 -->
+  </article>
+  <!-- ここまで一つの記事 -->
+  <!-- ここから一つの記事 -->
+  <article>
+    <!-- ここから投稿内容を表示する -->
+    <span>嘆きつつ</span>
+    <span>ますらをのこの</span>
+    <span>恋ふれこそ</span>
+    <span>我が髪結ひの</span>
+    <span>漬ちてぬれけれ</span>
+    <p>作者：よみひと知らず</p>
+    <!-- ここまで投稿内容を表示する -->
+
+    <!-- ここから編集・削除・いいねボタンの設置場所 -->
+    <div class="edit">
+      <!--<form action="/edit/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="編集">-->
+      <!--</form>-->
+      <!--<form action="/delete/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="削除">-->
+      <!--</form>-->
+      <!--<form action="/good/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="いいね">-->
+      <!--</form>-->
+    </div>
+    <!-- ここまで編集・削除・いいねボタンの設置場所 -->
+  </article>
+  <!-- ここまで一つの記事 -->
+  <!-- ここから一つの記事 -->
+  <article>
+    <!-- ここから投稿内容を表示する -->
+    <span>嘆きつつ</span>
+    <span>ますらをのこの</span>
+    <span>恋ふれこそ</span>
+    <span>我が髪結ひの</span>
+    <span>漬ちてぬれけれ</span>
+    <p>作者：よみひと知らず</p>
+    <!-- ここまで投稿内容を表示する -->
+
+    <!-- ここから編集・削除・いいねボタンの設置場所 -->
+    <div class="edit">
+      <!--<form action="/edit/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="編集">-->
+      <!--</form>-->
+      <!--<form action="/delete/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="削除">-->
+      <!--</form>-->
+      <!--<form action="/good/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="いいね">-->
+      <!--</form>-->
+    </div>
+    <!-- ここまで編集・削除・いいねボタンの設置場所 -->
+  </article>
+  <!-- ここまで一つの記事 -->
+  <!-- ここから一つの記事 -->
+  <article>
+    <!-- ここから投稿内容を表示する -->
+    <span>嘆きつつ</span>
+    <span>ますらをのこの</span>
+    <span>恋ふれこそ</span>
+    <span>我が髪結ひの</span>
+    <span>漬ちてぬれけれ</span>
+    <p>作者：よみひと知らず</p>
+    <!-- ここまで投稿内容を表示する -->
+
+    <!-- ここから編集・削除・いいねボタンの設置場所 -->
+    <div class="edit">
+      <!--<form action="/edit/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="編集">-->
+      <!--</form>-->
+      <!--<form action="/delete/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="削除">-->
+      <!--</form>-->
+      <!--<form action="/good/<%= content.id %>" method="post">-->
+      <!-- <input type="submit" value="いいね">-->
+      <!--</form>-->
+    </div>
+    <!-- ここまで編集・削除・いいねボタンの設置場所 -->
+  </article>
+  <!-- ここまで一つの記事 -->
+
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+$medium-screen-down: 960px !default;
+@media only screen and (max-width: $medium-screen-down) {
+// ここからmedia screenの設定
+main {
+  width: 100%;
+}
+main article {
+  max-width: 40%;
+  @include flexbox-child($basis: 40%, $grow: 1);
+}
+
+// ここまでmedia screenの設定
+}
