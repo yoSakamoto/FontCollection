@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>FontCollection</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
 <% if current_user %>
@@ -16,13 +14,11 @@
     </div>
   <% end %>
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg　" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
     投稿ボタン
   </button>
-  <a href="/haiku"><span class="glyphicon glyphicon-new-window"></span>ボタん</a>
   
-
-  <!-- Modal -->
+  <!-- 投稿用Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -49,15 +45,16 @@
       </div>
     </div>
   </div>
+  <!--投稿用Modal_End-->
+  
+  <!--TimeLine-->
   <div class="row">
     <h1 class="page-header">みんなのおすすめフォント</h1>
   </div>
-  <main>
     <div class="row">
-    <div class="col-md-6">
-        <% @reviews.each do |review| %>
+       <% @reviews.each do |review| %>
+      <div class="col-sm-6 col-md-4">
         <ul class="panel panel-primary">
-        <article>
           <div class="row">
           <div class="col-md-12">
           <h3>
@@ -74,20 +71,18 @@
           </div>
         </div>
         <div class="row">
-            <div class="col-md-9">
-              <a class="pull-right btn-lg" href="/review/<%=review.id %>">
-              <span class="glyphicon glyphicon-plus-sign"></span>
+            <div class="col-md-12">
+              <a class="pull-right btn-lg" href="/review/<%=review.id %>" role="button" data-toggle="modal" >
+              <span class="glyphicon glyphicon-fullscreen"></span>
               </a>
             </div>
         </div>
-        </article>
+        </li>
         </ul>
-        <% end %>
-      
     </div>
+    <% end %>
   </div>
-  </main>
-  
+  <!--TimeLine_End-->
 <% end %>
 </body>
 </html>
