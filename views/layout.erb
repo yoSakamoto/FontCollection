@@ -17,23 +17,17 @@
             <ul class="nav navbar-nav navbar-right">
                 <% if current_user %>
                     <li>
-                        <p class="navbar-text">
-                            <span class="glyphicon glyphicon-user"></span>
+                            <a href="/mypage">
+                            <span class="glyphicon glyphicon-user">
+                            </span>
                             <%= current_user.name %>
-                        </p>
+                            </a>
                     </li>
                     <li>
                         <a href="/">
                         <span class="glyphicon glyphicon-home">
                         </span>
                         TimeLine
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/mypage">
-                        <span class="glyphicon glyphicon-heart">
-                        </span>
-                        MyPage
                         </a>
                     </li>
                     <li>

@@ -40,6 +40,7 @@ get '/' do
 end
 
 get '/mypage' do
+  
   erb :mypage
 end
 
@@ -53,6 +54,7 @@ get '/sign_out' do
   session[:user_id] = nil
   redirect '/'
 end
+
 post '/user/create' do
   User.create(
     name: params[:name],
