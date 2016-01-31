@@ -33,9 +33,6 @@ post '/review/create' do
     end
 end
 
-
-
-
 get '/' do
     @reviews = Review.all
     erb :index
@@ -49,9 +46,11 @@ end
 get '/sign_in' do
   erb :sign_in
 end
+
 get '/sign_up' do
   erb :sign_up
 end
+
 get '/sign_out' do
   session[:user_id] = nil
   redirect '/'

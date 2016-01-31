@@ -3,8 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <title>FontCollection</title>
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+	<!-- Owl -->
+	<link rel="stylesheet" href="stylesheets/owl.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="stylesheets/animate.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" href="stylesheets/eleganticons/et-icons.css">
+	<!-- Main style -->
+	<link rel="stylesheet" href="stylesheets/cardio.css">
 </head>
 <body>
+	<nav class="navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logo.png" data-active-url="img/logo-active.png" alt=""></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-nav">
+					<li><a href="#intro">Intro</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#pricing">Pricing</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+  <!--Header-->
+  <header id="intro">
+		<div class="container">
+			<div class="table">
+				<div class="header-text">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h3 class="light white">あなたのフォント選びをサポートします。</h3>
+							<h1 class="white typed">FontCollection</h1>
+							<span class="typed-cursor">|</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--Header End-->
+	
+	
 <% if current_user %>
   <% if @error %>
     <div class="alert alert-danger" role="alert">
@@ -17,6 +76,7 @@
   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
     投稿ボタン
   </button>
+  
   
   <!-- 投稿用Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -51,7 +111,8 @@
   <div class="row">
     <h1 class="page-header">みんなのおすすめフォント</h1>
   </div>
-    <div class="row">
+      <article>
+         <div class="row">
        <% @reviews.each do |review| %>
       <div class="col-sm-6 col-md-4">
         <ul class="panel panel-primary">
@@ -59,7 +120,7 @@
           <div class="col-md-12">
           <h3>
             <span class="glyphicon glyphicon-bookmark">
-            </span> <%= review.title %>
+            </span> <%=review.title %>
           </h3>
           </div>
         </div>
@@ -82,6 +143,9 @@
     </div>
     <% end %>
   </div>
+        
+      </article>
+   
   <!--TimeLine_End-->
 <% end %>
 </body>
