@@ -4,76 +4,124 @@
   <meta charset="UTF-8">
   <title>FontCollection--TimeLine--</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="stylesheets/normalize.css">
+  
+  <!--Link stylesheets Start-->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="stylesheets/bootstrap.css">
-	<!-- Owl -->
-	<link rel="stylesheet" href="stylesheets/owl.css">
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="stylesheets/animate.css">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
-	<!-- Elegant Icons -->
-	<link rel="stylesheet" href="stylesheets/eleganticons/et-icons.css">
-	<!-- Main style -->
-	<link rel="stylesheet" href="stylesheets/cardio.css">
+	<link rel="stylesheet" href="stylesheets/haiku.css">
+	<!--Link stylesheets End-->
+	
+	<!--script Start-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <script></script>
-  <script></script>
+  <!--script End-->
 </head>
 <body>
-	<header class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="/" class="navbar-brand">FontCollection</a>
-        </div>
-        <nav class="collapse navbar-collapse" id="bs-navbar"></nav>
-            <ul class="nav navbar-nav navbar-right">
-                <% if current_user %>
-                    <li>
-                            <a href="/mypage">
-                            <span class="glyphicon glyphicon-user">
-                            </span>
-                            <%= current_user.name %>
-                            </a>
-                    </li>
-                    <li>
-                        <a href="/">
-                        <span class="glyphicon glyphicon-home">
-                        </span>
-                        TimeLine
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/sign_out">
-                        <span class="glyphicon glyphicon-log-out">
-                        </span>
-                            Sign out 
-                        </a>
-                    </li>
+  <nav class="navbar" id="navbox">
+		<div class="container">
+			<div class="navbar-header" id="navbox-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="glyphicon glyphicon-align-justify"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" id="nav-title" href="/">FontCollection</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-nav">
+				   <% if current_user %>
+					  <li>
+					    <a href="/sample">
+              <span class="glyphicon glyphicon-user"></span>Sample</a>
+            </li>
+            <li>
+              <a href="/mypage">
+              <span class="glyphicon glyphicon-user"></span><%= current_user.name %></a>
+            </li>
+            <li>
+              <a href="/"><span class="glyphicon glyphicon-home"></span>TimeLine</a>
+            </li>
+            <li>
+              <a href="/sign_out"><span class="glyphicon glyphicon-log-out"></span>Sign out</a>
+            </li>
+           <% else %>
+            <li>
+              <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signupview">
+                <span class="glyphicon glyphicon-new-window"></span>
+                新規登録
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signinview">
+                <span class="glyphicon glyphicon-new-window"></span>
+                ログイン
+              </button>
+            </li>
+           <% end %>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	
+<!--	<header class="navbar navbar-default">-->
+<!--    <div class="container">-->
+<!--        <div class="navbar-header">-->
+<!--            <a href="/" class="navbar-brand">FontCollection</a>-->
+<!--        </div>-->
+<!--        <nav class="collapse navbar-collapse" id="bs-navbar">-->
+<!--            <ul class="nav navbar-nav navbar-right">-->
+<!--                <% if current_user %>-->
+<!--                    <li>-->
+<!--                            <a href="/sample">-->
+<!--                            <span class="glyphicon glyphicon-user">-->
+<!--                            </span>-->
+<!--                            Sample-->
+<!--                            </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                            <a href="/mypage">-->
+<!--                            <span class="glyphicon glyphicon-user">-->
+<!--                            </span>-->
+<!--                            <%= current_user.name %>-->
+<!--                            </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="/">-->
+<!--                        <span class="glyphicon glyphicon-home">-->
+<!--                        </span>-->
+<!--                        TimeLine-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="/sign_out">-->
+<!--                        <span class="glyphicon glyphicon-log-out">-->
+<!--                        </span>-->
+<!--                            Sign out -->
+<!--                        </a>-->
+<!--                    </li>-->
                     
-                <% else %>
-                    <li>
-                        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signupview">
-                            <span class="glyphicon glyphicon-new-window">
-                        </span>
-                        新規登録
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signinview">
-                            <span class="glyphicon glyphicon-new-window">
-                        </span>
-                        ログイン
-                        </button>
-                    </li>
-                <% end %>
-            </ul> 
-        </nav>
-    </div>
-</header>
+<!--                <% else %>-->
+<!--                    <li>-->
+<!--                        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signupview">-->
+<!--                            <span class="glyphicon glyphicon-new-window">-->
+<!--                        </span>-->
+<!--                        新規登録-->
+<!--                        </button>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signinview">-->
+<!--                            <span class="glyphicon glyphicon-new-window">-->
+<!--                        </span>-->
+<!--                        ログイン-->
+<!--                        </button>-->
+<!--                    </li>-->
+<!--                <% end %>-->
+<!--            </ul> -->
+<!--        </nav>-->
+<!--    </div>-->
+<!--</header>-->
 
 
 <!--Sign In Modal VIew-->
@@ -137,8 +185,8 @@
 
 <!--Sign In Modal VIew END-->
 
-<!--<div class="container">-->
-<!--    <%= yield %>-->
-<!--</div>-->
+<div class="container">
+    <%= yield %>
+</div>
 </body>
 </html>
