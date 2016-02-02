@@ -16,25 +16,22 @@
   <!--script End-->
 </head>
 <body>
-  <nav class="navbar" id="navbox">
-		<div class="container">
-			<div class="navbar-header" id="navbox-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="glyphicon glyphicon-align-justify"></span>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="glyphicon glyphicon-align-justify"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" id="nav-title" href="/">FontCollection</a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right main-nav">
-				   <% if current_user %>
-					  <li>
-					    <a href="/sample">
-              <span class="glyphicon glyphicon-user"></span>Sample</a>
-            </li>
+    </button>
+    <a class="navbar-brand" href="/">FontCollection</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <% if current_user %>
             <li>
               <a href="/mypage">
               <span class="glyphicon glyphicon-user"></span><%= current_user.name %></a>
@@ -47,81 +44,15 @@
             </li>
            <% else %>
             <li>
-              <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signupview">
-                <span class="glyphicon glyphicon-new-window"></span>
-                新規登録
-              </button>
+              <a href="#signupview" role="button" class="btn" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>新規登録</a>
             </li>
             <li>
-              <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signinview">
-                <span class="glyphicon glyphicon-new-window"></span>
-                ログイン
-              </button>
+              <a href="#signinview" role="button" class="btn" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>ログイン</a>
             </li>
            <% end %>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	
-	
-<!--	<header class="navbar navbar-default">-->
-<!--    <div class="container">-->
-<!--        <div class="navbar-header">-->
-<!--            <a href="/" class="navbar-brand">FontCollection</a>-->
-<!--        </div>-->
-<!--        <nav class="collapse navbar-collapse" id="bs-navbar">-->
-<!--            <ul class="nav navbar-nav navbar-right">-->
-<!--                <% if current_user %>-->
-<!--                    <li>-->
-<!--                            <a href="/sample">-->
-<!--                            <span class="glyphicon glyphicon-user">-->
-<!--                            </span>-->
-<!--                            Sample-->
-<!--                            </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                            <a href="/mypage">-->
-<!--                            <span class="glyphicon glyphicon-user">-->
-<!--                            </span>-->
-<!--                            <%= current_user.name %>-->
-<!--                            </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/">-->
-<!--                        <span class="glyphicon glyphicon-home">-->
-<!--                        </span>-->
-<!--                        TimeLine-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/sign_out">-->
-<!--                        <span class="glyphicon glyphicon-log-out">-->
-<!--                        </span>-->
-<!--                            Sign out -->
-<!--                        </a>-->
-<!--                    </li>-->
-                    
-<!--                <% else %>-->
-<!--                    <li>-->
-<!--                        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signupview">-->
-<!--                            <span class="glyphicon glyphicon-new-window">-->
-<!--                        </span>-->
-<!--                        新規登録-->
-<!--                        </button>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signinview">-->
-<!--                            <span class="glyphicon glyphicon-new-window">-->
-<!--                        </span>-->
-<!--                        ログイン-->
-<!--                        </button>-->
-<!--                    </li>-->
-<!--                <% end %>-->
-<!--            </ul> -->
-<!--        </nav>-->
-<!--    </div>-->
-<!--</header>-->
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
 
 
 <!--Sign In Modal VIew-->
@@ -152,7 +83,6 @@
     </div>
   </div>
 <!--Sign In Modal VIew END-->
-
 
 <!--Sign Up Modal VIew-->
 <div class="modal fade" id="signupview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

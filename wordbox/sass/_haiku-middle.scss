@@ -1,0 +1,21 @@
+@import "compass";
+@import "responsive";
+
+$medium-screen-down: 960px !default;
+@media only screen and (max-width: $medium-screen-down) {
+// ここからmedia screenの設定
+main {
+  width: 100%;
+}
+main article {
+  max-width: 60%;
+  @include flexbox-child($basis: 33%, $grow: 2);
+}
+#form-box {
+  form {
+    width: 62.5%;
+    height: 90%;
+  }
+}
+// ここまでmedia screenの設定
+}

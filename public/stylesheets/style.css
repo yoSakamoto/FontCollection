@@ -1,0 +1,16 @@
+      .block {
+        border-style: solid;
+        width: 50%;
+        margin: 5px;
+      }
+      .contents {
+        padding: 10px;
+      }
+      .user_icon{
+        float: left;
+        width: 40px;
+        height: 40px;
+      }
+    
+     
+			

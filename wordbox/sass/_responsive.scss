@@ -1,0 +1,19 @@
+$small-screen-down: 480px !default;
+$medium-screen-down: 960px !default;
+$large-screen-up: 961px !default;
+
+@mixin small-window {
+  @media only screen and (max-width: $small-screen-down) {
+    @content;
+  }
+}
+@mixin middle-window {
+  @media only screen and (max-width: $medium-screen-down) {
+    @content;
+  }
+}
+@mixin large-window {
+  @media only screen and (min-width: $large-screen-up) {
+    @content;
+  }
+}

@@ -1,0 +1,219 @@
+@import "compass";
+
+// defaults
+
+$artAlph: 0.9;
+$blue: rgba(116,158, 199, $artAlph);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  @include box-sizing(border-box);
+}
+
+body {
+  width: 100%;
+  background-color: #eee;
+  background-image: url("../images/wordbox-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+header {
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 20;
+  h1 {
+    font-size: 23px;
+    text-align: center;
+    font-weight: 100;
+    a {
+      padding: 5px 0;
+      display: block;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, $artAlph - 0.2);
+      color: #FFF;
+      &:hover {
+        color: rgb(255, 255, 0);
+      }
+    }
+  }
+}
+// MODAL VIEW
+%overlay {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#form-box {
+  position: fixed;
+  @extend %overlay;
+  display: none;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  & > a {
+    position: absolute;
+    @extend %overlay;
+  }
+  form {
+    position: absolute;
+    left:0; right:0; top:0; bottom: 0;
+    padding: 30px;
+    @include border-radius(8px);
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    overflow: scroll;
+    background-color: $blue;
+    color: #FFF;
+    font-weight: normal;
+    a {
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 50px;
+      right:5px;
+      top:5px;
+      padding: 2px 6px 10px 6px;
+      font-size: 30px;
+      text-decoration: none;
+      text-align: center;
+      color: #FFF;
+    }
+    %textShadow {
+      text-shadow: 1px 0 2px black;
+    }
+    h3 {
+      margin-bottom: 12px;
+      @extend %textShadow;
+    }
+    h4 {
+      margin-bottom: 6px;
+      @extend %textShadow;
+    }
+    h5 {
+      margin-bottom: 3px;
+      @extend %textShadow;
+    }
+  }
+  input[type="text"],
+  input[type="url"] {
+    padding: 6px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  input[type="submit"] {
+    @include appearance(none);
+    padding: 5px;
+    box-shadow: none;
+    border: none;
+    @extend %blueBtn;
+  }
+  textarea {
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+    line-height: 1.4em;
+    margin-bottom: 6px;
+    resize: none;
+  }
+}
+#form-box:target {
+  display: block;
+}
+// mainの設定
+%flexbox {
+  @include display-flex;
+  @include flex-direction(row);
+  @include align-items(stretch);
+  @include align-content(space-between);
+  @include flex-wrap(wrap);
+  @include justify-content(space-around);
+}
+@mixin flexbox-child($basis: 20%, $grow: 1) {
+  @include flex-basis($basis);
+  @include flex-grow($grow);
+}
+main {
+  position: relative;
+  top: 70px;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 1;
+  @extend %flexbox;
+}
+main article {
+  @include flexbox-child();
+  
+  min-height: 330px;
+  max-width: 50%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, $artAlph);
+  @include border-radius(3px);
+
+  overflow: hidden;
+  margin-bottom: 1px;
+  margin: 0 30px 60px 30px;
+
+  &:nth-child(even){
+    background: $blue;
+    color: #FFF;
+    a {
+      color: #FFF;
+    }
+  }
+
+  h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 1em;
+  }
+}
+// ここまでmainの設定
+
+
+.edit {
+  text-align: right;
+  form {
+    @include inline-block();
+    input {
+      @include appearance(none);
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      padding: 5px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #FFF;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.edit-view {
+  /* 編集ページ場合は強制的にdisplayを表示させる。 */
+  display: block !important;
+}
+
+// Override
+
+@import "haiku-middle";
+$small-screen-down: 720px;
+@import "haiku-small";
+
+@import "customBtn";
+
+/* Created by Kosei Himeno. Last Update 2015 June */

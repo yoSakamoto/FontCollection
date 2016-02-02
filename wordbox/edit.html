@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>単語帳</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./stylesheets/wordbox.css">
+</head>
+<body>
+<header>
+  <h1><a href="#form-box">★</a></h1>
+</header>
+
+<div id="form-box" class="edit-view">
+  <a href="#"></a>
+  <form action="/new" method="post">
+    <a href="#">☓</a>
+    <h3>編集フォーム</h3>
+    <h4>見出し</h4>
+    <input type="text" placeholder="タイトル" name="title" value="見出し">
+    <h4>本文</h4>
+    <textarea name="body" id="" cols="30" rows="10">本文</textarea>
+    <h4>参考リンク</h4>
+    <input type="text" placeholder="リンク先のタイトル" name="linkTitle" value="LINK TITLE">
+    <input type="url" placeholder="URL" name="url" value="http://">
+    <input type="submit" value="投稿する">
+  </form>
+</div>
+
+</body>
+</html>
