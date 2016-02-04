@@ -57,5 +57,48 @@ body {
 }
 
 
+.text-title{
+    position: fixed;
+    top:22%;
+    left:12%;
+    color:#fefff3;
+}
+.main-title{
+  font-size:100px;
+  font-weight:bold;
+}
+.square-red {
+  position:fixed;
+  margin-top:20px;
+	display: inline-block;
+	width: 600px;
+	height: 600px;
+	border:4px solid #e17c80;
+	transform: rotate( -45deg );
+}
+.square-green{
+  z-index:3;
+  position:fixed;
+  margin-top:10px;
+  margin-left:10px;
+  display: inline-block;
+	width: 600px;
+	height: 600px;
+	border:6px solid #98d0a9;
+	transform: rotate( -45deg );
+}
+.square-blue{
+  position:fixed;
+  display: inline-block;
+	width: 600px;
+	height: 600px;
+	border:4px solid #9cd6dd;
+	transform: rotate( -45deg );
+}
+.main{
+  position:relative;
+}
+
+
 
 

@@ -34,6 +34,10 @@ post '/review/create' do
 end
 
 get '/' do
+    erb :landing
+end
+
+get '/index' do
     @reviews = Review.all
     erb :index
 end
@@ -72,5 +76,5 @@ post '/session/create' do
   if user && user.authenticate(params[:password])
     session[:user_id] = user.id
   end
-  redirect "/"
+  redirect "/index"
 end
