@@ -19,7 +19,7 @@
   				<div class="header-text">
   					<div class="row">
   						<div class="col-md-12 text-center">
-  							<h1 class="white typed">TimeLine</h1>
+  							<h1 class="white typed">ShowRoom</h1>
   						</div>
   					</div>
   				</div>
@@ -49,22 +49,22 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">投稿</h4>
+            <h4 class="modal-title" id="myModalLabel">Send Share</h4>
           </div>
           <div class="modal-body">
             <form action="/review/create" method="post" enctype="multipart/form-data">
               <div class="form-group">
-                <label for="title">タイトル</label>
+                <label for="title">Font Name</label>
                 <input id="title" class="form-control" type="text" name="title" />
               </div>
               <div class="form-group">
-                <label for="body">テキスト</label>
+                <label for="body">Massege</label>
                 <textarea id="body" class="form-control" name="body"cols="30" rows="10"></textarea>
               </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary pull- right">投稿</button>
+                <button type="submit" class="btn btn-primary pull- right">Share</button>
               </div>
             </form>
         </div>
@@ -100,6 +100,12 @@
               <div class="col-md-12">
                 <a class="pull-right btn-lg" href="/review/<%=review.id %>" role="button" data-toggle="modal" >
                   <span class="glyphicon glyphicon-fullscreen"></span>
+                </a>
+                <a class="pull-right btn-lg" href="" role="button" data-toggle="modal">
+                  <span class="glyphicon glyphicon-heart"></span>
+                </a>
+                <a class="pull-right btn-lg" href="" role="button" data-toggle="modal">
+                  <span class="glyphicon glyphicon-thumbs-up"></span>
                 </a>
               </div>
             </div>

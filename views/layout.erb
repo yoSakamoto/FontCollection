@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">FontCollection</a>
+    <a class="navbar-brand" href="/index">FontCollection</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,17 +37,17 @@
               <span class="glyphicon glyphicon-user"></span><%= current_user.name %></a>
             </li>
             <li>
-              <a href="/index"><span class="glyphicon glyphicon-home"></span>TimeLine</a>
+              <a href="/index"><span class="glyphicon glyphicon-home"></span>ShowRoom</a>
             </li>
             <li>
               <a href="/sign_out"><span class="glyphicon glyphicon-log-out"></span>Sign out</a>
             </li>
            <% else %>
             <li>
-              <a href="#signupview" role="button" class="btn" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>新規登録</a>
+              <a href="#signupview" role="button" class="btn" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>SignUP</a>
             </li>
             <li>
-              <a href="#signinview" role="button" class="btn" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>ログイン</a>
+              <a href="#signinview" role="button" class="btn" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>Login</a>
             </li>
            <% end %>
     </ul>
@@ -61,7 +61,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">ログイン</h4>
+          <h4 class="modal-title" id="myModalLabel">Login</h4>
         </div>
         <div class="modal-body">
           <form class="form-inline" action="/session/create" method="post">
@@ -70,13 +70,13 @@
                 <input id="name" class="form-control"type="text" name="name" />
             </div>
             <div class="form-group">
-            <label for="password">パスワード</label>
+            <label for="password">Password</label>
                 <input id="password" class="form-control" type="password" name="password" />
             </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary pull- right">ログイン</button>
+          <button type="submit" class="btn btn-primary pull- right">Login</button>
         </div>
         </form>
       </div>
@@ -90,7 +90,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">新規登録</h4>
+          <h4 class="modal-title" id="myModalLabel">SignUP</h4>
         </div>
         <div class="modal-body">
           <form action="/user/create" method="post">
@@ -99,14 +99,14 @@
                 <input id="name" class="form-control" type="text" name="name" />
             </div>
             <div class="form-group">
-                <label for="password">パスワード</label>
+                <label for="password">New Password</label>
                 <input id="password" class="form-control" type="password" name="password" />
             </div>
             <div class="form-group">
-                <label for="password">パスワードの確認</label>
+                <label for="password">Confirm New Password</label>
                 <input id="password_confirmination" class="form-control" type="password" name="password_confirmation" />
             </div>
-            <button type="submit" class="btn btn- default">登録</button>
+            <button type="submit" class="btn btn- default">SignUP</button>
         </form>
       </div>
     </div>

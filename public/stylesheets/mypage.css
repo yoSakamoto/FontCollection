@@ -13,53 +13,39 @@ html, body {
 
 body {
   /* 背景が画像を挿入していますが、色でもOK */
-  background-image: url("/images/haikei.png");
+  background-color: #ebebeb;  
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
 }
 
-.wrapper {
-  background-color: #ebebeb;
-  background-size: cover;
-}
 
 .navbar-custom {
-    background-color:#E17C80;
-    color:#525451;
+    background-color:#AB3B3A;
+    color:#ffffff;
     border-radius:0;
 }
 
 .navbar-custom .navbar-nav > li > a {
-    color:#525451;
+    color:#fff;
     padding-right:50PX;
     padding-left:50px;
 }
 .navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-    color: #525451;
+    color: #fff;
     background-color:transparent;
     
 }
 
 .navbar-custom .navbar-brand {
-    color:#525451;
+    color:#eeeeee;
     font-size:25px;
     padding-left:50px;
 }
 
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  padding:0;
-  margin:0;
-  background-color:#ebebeb;
-  
-}
-
 #intro {
   padding-top:60px;
-  margin:0;
 }
 
 #box ul{
@@ -67,7 +53,7 @@ body {
   /*rgba(0, 0, 0, 0.30)*/
   color:#fff;
   border-style: none;
-  font-size:30px;
+  font-size:25px;
 }
 
 

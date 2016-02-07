@@ -25,7 +25,7 @@ post '/review/create' do
     user_id: current_user.id
     )
     if review.save
-        redirect '/'
+        redirect '/index'
     else
         @error = "Not Post"
         @reviews = Review.all

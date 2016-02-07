@@ -2,71 +2,81 @@
 <html>
   <head>
     <title>TimeLine</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="stylesheets/haiku.css">
   </head>
   <body>
-      
-    <!--Header Start-->
+      <!--Header Start-->
     <header id="intro">
   		<div class="container">
   			<div class="table">
   				<div class="header-text">
   					<div class="row">
   						<div class="col-md-12 text-center">
-  							<h1 class="white typed">MyPage</h1>
+  							<h1 class="white typed">MyRoom</h1>
   						</div>
   					</div>
   				</div>
   			</div>
   		</div>
   	</header>
+  	
   	<!--Header End-->
-     <form class="form-horizontal">
+  	<div class="row">
+         <h1 class="page-header">Favorite Font</h1>
+    </div>
+    <form class="form-horizontal">
       <div class="form-group">
-        <label for="exampleInputEmail1">Text</label>
+        <label for="exampleInputEmail1"><h3>Text</h3></label>
         <input type="text" onkeyup="alertValue()" onkeydown="alertValue()" name="font" id="txt">
       </div>
 	  </form>
 	  
-	  
-       <%["Jura","BoomtownDeco","CODE","Forum","garto","Gota","Hero","AdmirationPains","OpenBaskerville","passau"].each do |str|%>
-       <div class="row">
-        <div class="col-md-6">
-          <article id="box">
+	  <!--MyFont Start-->
+	  <div class="row">
+	    <% ["Jura","BoomtownDeco","CODE","Forum","garto","Gota","Hero","AdmirationPains","OpenBaskerville","passau"].each do |str| %>
+	    <article id="box">
+	    <div class="col-xs-12 col-sm-6 col-md-4">
           <ul class="panel panel-primary">
             <div class="row">
               <div class="col-md-12">
-                <h2>
+                <h3>
                   <span class="glyphicon glyphicon-bookmark">
-                  </span>
-                  title
-                </h2>
+                  </span> <%= str %>
+                </h3>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12 font_text" id=<%= str %> >
-                      <%= str %>
+              <div class="col-md-12 font_text text-center" id=<%= str %>>
+                  <%= str %>
               </div>
             </div>
+            <div class="row">
+               <div class="col-md-12">
+                <button type="button" class="btn btn-default btn-sm pull-right">
+                    <span class="glyphicon glyphicon-save"></span>
+                </button>
+              　</div>
+            </div>
           </ul>
-          </article>
         </div>
-      </div>
-    
-    
-    <!--style&script-->
+      </article>
+      <!--MyFont End-->
+      
     <style type="text/css">
       @font-face {
 					font-family: '<%= str %>';
 					src: url('../fonts/<%= str %>.ttf')format('truetype');
-				}
-	#<%= str %>{
-	    font-family: '<%= str %>';
-	    font-size: 40px;
-	    word-break:break-all
-	}
+			}
+	    #<%= str %> {
+	    font-family: <%= str %>;
+	    font-size:40px;
+	    word-break: break-all;
+	    }
 	</style>
 	<% end %>
+	</div>
+	
     <script>
     //リアルタイム変更
      function alertValue() {
