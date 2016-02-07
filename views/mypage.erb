@@ -25,14 +25,6 @@
   	<div class="row">
          <h1 class="page-header">Favorite Font</h1>
     </div>
-    
-   
-   <!-- <form class="form-horizontal">-->
-   <!--   <div class="form-group">-->
-   <!--     <label for="exampleInputEmail1"><h3>Text</h3></label>-->
-   <!--     <input type="text" class="form-control" placeholder="Text input" onkeyup="alertValue()" onkeydown="alertValue()" name="font" id="txt">-->
-   <!--   </div>-->
-	  <!--</form>-->
 	  
 	  <!--MyFont Start-->
 	  <div class="row">
@@ -55,9 +47,9 @@
             </div>
             <div class="row">
                <div class="col-md-12">
-                <button type="button" class="btn btn-default btn-sm pull-right">
-                    <span class="glyphicon glyphicon-save"></span>
-                </button>
+                 <a class="pull-right btn-lg" href="" >
+                  <span class="glyphicon glyphicon-save"></span>
+                </a>
               　</div>
             </div>
           </ul>
@@ -84,10 +76,14 @@
      function alertValue() {
       
          var elm = document.getElementsByClassName("font_text");
+         
+         var previewtext = document.getElementById("txt").value;
       
           for(i=0; i<elm.length; i++) {
-              elm[i].innerHTML=document.getElementById("txt").value;
-              
+              elm[i].innerHTML=previewtext;
+              if (elm[i].innerHTML=="") {
+                elm[i].innerHTML=elm[i].id
+              }
           }
      }
     </script>
