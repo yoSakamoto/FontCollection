@@ -13,19 +13,19 @@
   <% if current_user %>
   
     <!--Header Start-->
-    <header id="intro">
-  		<div class="container">
-  			<div class="table">
-  				<div class="header-text">
-  					<div class="row">
-  						<div class="col-md-12 text-center">
-  							<h1 class="white typed">ShowRoom</h1>
-  						</div>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
-  	</header>
+    <div class="jumbotron" id="intro">
+        <div class="container">
+          <h1>ShareRoom Is Here</h1>
+          <p></p
+          <p>
+            <!-- Post Modal Button Start  -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#postModal">
+            Please Share
+            </button>
+            <!-- Post Modal Button End  -->
+          </p>
+        </div>
+    </div>
   	<!--Header End-->
 	
     <% if @error %>
@@ -35,13 +35,6 @@
         <%= @error %>
       </div>
     <% end %>
-    
-    <!-- Post Modal Button Start  -->
-    <button type="button" class="btn btn-danger btn-lg center-block" data-toggle="modal" data-target="#postModal">
-    Share
-    </button>
-    <!-- Post Modal Button End  -->
-  
   
     <!---Post Modal Start--->
     <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -98,13 +91,13 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <a class="pull-right btn-lg" href="/review/<%=review.id %>" role="button" data-toggle="modal" >
+                <a class="pull-right btn-lg" href="/review/<%=review.id %>" >
                   <span class="glyphicon glyphicon-fullscreen"></span>
                 </a>
-                <a class="pull-right btn-lg" href="" role="button" data-toggle="modal">
+                <a class="pull-right btn-lg" href="" >
                   <span class="glyphicon glyphicon-heart"></span>
                 </a>
-                <a class="pull-right btn-lg" href="" role="button" data-toggle="modal">
+                <a class="pull-right btn-lg" href="" >
                   <span class="glyphicon glyphicon-thumbs-up"></span>
                 </a>
               </div>

@@ -3,34 +3,36 @@
   <head>
     <title>TimeLine</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="stylesheets/haiku.css">
+    <link rel="stylesheet" href="stylesheets/haiku.css">
   </head>
   <body>
       <!--Header Start-->
-    <header id="intro">
-  		<div class="container">
-  			<div class="table">
-  				<div class="header-text">
-  					<div class="row">
-  						<div class="col-md-12 text-center">
-  							<h1 class="white typed">MyRoom</h1>
-  						</div>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
-  	</header>
+    <div class="jumbotron" id="myroom">
+        <div class="container">
+          <h1>MyRoom Is Here</h1>
+          <p>
+              <form>
+                <div class="form-group">
+                   <label for="inputPassword3" class="control-label">Font Preview</label>
+                    <input type="text" name="name" class="form-control" placeholder="Text Input" onkeyup="alertValue()" onkeydown="alertValue()" name="font" id="txt">
+                </div>
+              </form>
+          </p>
+        </div>
+    </div>
   	
   	<!--Header End-->
   	<div class="row">
          <h1 class="page-header">Favorite Font</h1>
     </div>
-    <form class="form-horizontal">
-      <div class="form-group">
-        <label for="exampleInputEmail1"><h3>Text</h3></label>
-        <input type="text" onkeyup="alertValue()" onkeydown="alertValue()" name="font" id="txt">
-      </div>
-	  </form>
+    
+   
+   <!-- <form class="form-horizontal">-->
+   <!--   <div class="form-group">-->
+   <!--     <label for="exampleInputEmail1"><h3>Text</h3></label>-->
+   <!--     <input type="text" class="form-control" placeholder="Text input" onkeyup="alertValue()" onkeydown="alertValue()" name="font" id="txt">-->
+   <!--   </div>-->
+	  <!--</form>-->
 	  
 	  <!--MyFont Start-->
 	  <div class="row">

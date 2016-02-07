@@ -46,10 +46,6 @@ get '/mypage' do
   erb :mypage
 end
 
-get '/sample' do
-    erb :sample
-end  
-
 get '/sign_in' do
   erb :sign_in
 end
@@ -71,6 +67,7 @@ post '/user/create' do
 )
   redirect "/"
 end
+
 post '/session/create' do
   user = User.find_by_name params[:name]
   if user && user.authenticate(params[:password])

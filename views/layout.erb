@@ -37,7 +37,7 @@
               <span class="glyphicon glyphicon-user"></span><%= current_user.name %></a>
             </li>
             <li>
-              <a href="/index"><span class="glyphicon glyphicon-home"></span>ShowRoom</a>
+              <a href="/index"><span class="glyphicon glyphicon-home"></span>ShareRoom</a>
             </li>
             <li>
               <a href="/sign_out"><span class="glyphicon glyphicon-log-out"></span>Sign out</a>
@@ -67,11 +67,11 @@
           <form class="form-inline" action="/session/create" method="post">
             <div class="form-group">
                 <label for="name">ID</label>
-                <input id="name" class="form-control"type="text" name="name" />
+                <input id="name" class="form-control" type="text" name="name" placeholder="Your ID"/>
             </div>
             <div class="form-group">
             <label for="password">Password</label>
-                <input id="password" class="form-control" type="password" name="password" />
+                <input id="password" class="form-control" type="password" name="password" placeholder="Your Password" />
             </div>
         </div>
         <div class="modal-footer">
@@ -96,15 +96,15 @@
           <form action="/user/create" method="post">
             <div class="form-group">
                 <label for="name">ID</label>
-                <input id="name" class="form-control" type="text" name="name" />
+                <input id="name" class="form-control" type="text" name="name" placeholder="Set Your Original ID" />
             </div>
             <div class="form-group">
                 <label for="password">New Password</label>
-                <input id="password" class="form-control" type="password" name="password" />
+                <input id="password" class="form-control" type="password" name="password" placeholder="Set Your Original Password" />
             </div>
             <div class="form-group">
                 <label for="password">Confirm New Password</label>
-                <input id="password_confirmination" class="form-control" type="password" name="password_confirmation" />
+                <input id="password_confirmination" class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password"/>
             </div>
             <button type="submit" class="btn btn- default">SignUP</button>
         </form>

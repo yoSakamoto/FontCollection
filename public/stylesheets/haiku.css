@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "nav.scss";
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,8 @@
 }
 
 html, body {
-  min-height: 100%;
+  margin:0;
+  padding:0;
 }
 
 body {
@@ -20,11 +20,7 @@ body {
   background-position: center center;
 }
 
-.wrapper {
-  background-color: #ebebeb;
-  background-size: cover;
-}
-
+/*以下がNavBar*/
 .navbar-custom {
     background-color:#E17C80;
     color:#525451;
@@ -48,27 +44,49 @@ body {
     padding-left:50px;
 }
 
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  padding:0;
-  margin:0;
-  background-color:#ebebeb;
-  
+.page-header {
+  color:#FEFFF0;
+}
+/*End*/
+
+
+a, a:link {
+  color: #E17C80;
+}
+a:hover, a:link:hover {
+  color: #FEFFF0;
 }
 
+/*以下がヘッダー部分*/
 #intro {
   padding-top:60px;
   margin:0;
+  background-color: #9CD6DD;
+  color:#525451;
+}
+
+#intro button {
+  background-color: #EBEBEB;
+  text-decoration:none;
+  color:#525451;
+}
+
+#myroom {
+  padding-top:60px;
+  margin:0;
+  background-color: #CED786;
+  color:#525451;
 }
 
 #box ul{
   background-color: rgba(0, 0, 0, 0.30);
   /*rgba(0, 0, 0, 0.30)*/
-  color:#fff;
+  color:#FEFFF0;
   border-style: none;
-  font-size:30px;
+  font-size:25px;
 }
+/*End*/
+
 
 
 .text-title{
